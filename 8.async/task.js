@@ -50,7 +50,7 @@ class AlarmClock {
 
   stop() {
     if (this.timerId !== null)
-      clearInterval(1);
+      clearInterval(this.timerId);
     this.timerId = null;
     console.log(`Будильник остановлен!`)
   }
