@@ -60,3 +60,11 @@ function makeWork(arrOfArr, func) {
 //   });
 //   return max;
 // }
+
+// Задача 3
+
+function worker2(arr) {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  return Math.abs(max - min);
+}
