@@ -81,22 +81,13 @@ class Library {
 
   findBookBy(type, value) {
     const findResult = this.books.find((item) => item[type] === value);
-    if (findResult) {
-      return findResult;
-    } else {
-      return null;
-    }
+    return findResult || null;
   }
 
   giveBookByName(bookName) {
     const findResult = this.books.find((item) => item.name === bookName);
     this.books = this.books.filter((item) => !(item.name === bookName));
-    if (findResult) {
-      return findResult;
-    } else {
-      return null;
-    }
-  }
+    return findResult || null;
 }
 
 class StudentLog {
