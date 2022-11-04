@@ -89,8 +89,9 @@ class Library {
     this.books = this.books.filter((item) => !(item.name === bookName));
     return findResult || null;
 }
+}
 
-class StudentLog {
+class Student {
   constructor(name) {
     this.name = name;
     this.academicSubjects = {};
@@ -100,7 +101,7 @@ class StudentLog {
     return this.name;
   }
 
-  addGrade(grade, subject) {
+  addMark(grade, subject) {
     if (!this.academicSubjects[subject]) {
       this.academicSubjects[subject] = [];
     }
@@ -126,7 +127,7 @@ class StudentLog {
     return Number(averageMark.toFixed(2));
   }
 
-  getTotalAverage() {
+  getAverage() {
     this.academicSubjects.average = [];
     const arr = [];
     for (const key in this.academicSubjects) {
