@@ -86,9 +86,9 @@ class Library {
 
   giveBookByName(bookName) {
     const findResult = this.books.find((item) => item.name === bookName);
-    this.books = this.books.filter((item) => !(item.name === bookName));
+    this.books = this.books.filter((item) => item.name !== bookName);
     return findResult || null;
-}
+  }
 }
 
 class Student {
