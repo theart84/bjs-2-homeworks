@@ -36,7 +36,7 @@ function solveEquation(a, b, c) {
      ) return false;
   
     let annPayment = +(S  * koef).toFixed(2);
-    let totalPayment = annPayment *  countMonths;
+    let totalPayment = (annPayment *  countMonths).toFixed(2);
 
     return totalPayment;
 
